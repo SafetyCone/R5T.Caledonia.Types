@@ -2,3 +2,4 @@ R5T.Caledonia.Types - A types library for the Caledonia (command-line invocation
 
 Goals
 
+Based on ProcessRunner and related functionality in: https://github.com/MinexAutomation/R5T.NetStandard.OS.
