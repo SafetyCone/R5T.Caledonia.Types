@@ -47,20 +47,27 @@ namespace R5T.Caledonia
             return exitCode;
         }
 
-        public static int Run(CommandLineInvocation invocation)
+        public static CommandLineInvocationResult Run(CommandLineInvocation invocation)
         {
-            var exitCode = CommandLineInvocationRunner.Run(invocation.Command, invocation.Arguments, invocation.ReceiveOutputData, invocation.ReceiveErrorData);
-            return exitCode;
+            var result = new CommandLineInvocationResult();
+
+            invocation.ReceiveOutputData = result.ReceiveOutputData;
+            invocation.ReceiveErrorData = result.ReceiveErrorData;
+
+            result.ExitCode = CommandLineInvocationRunner.Run(invocation.Command, invocation.Arguments, invocation.ReceiveOutputData, invocation.ReceiveErrorData);
+
+            return result;
         }
 
         public static CommandLineInvocationResult Run(string command, string arguments)
         {
-            var result = new CommandLineInvocationResult();
+            var invocation = new CommandLineInvocation()
+            {
+                Command = command,
+                Arguments = arguments,
+            };
 
-            var invocation = Types.Utilities.NewCommandLineInvocation(command, arguments, result);
-
-            result.ExitCode = CommandLineInvocationRunner.Run(invocation);
-
+            var result = CommandLineInvocationRunner.Run(invocation);
             return result;
         }
     }
