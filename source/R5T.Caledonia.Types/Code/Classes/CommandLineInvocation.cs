@@ -8,37 +8,55 @@ namespace R5T.Caledonia
     {
         #region Static
 
-        public static CommandLineInvocation New(string command, string arguments)
+        public static CommandLineInvocation New(string command, string arguments, bool suppressConsoleOutput = false)
         {
+            DataReceivedEventHandler receiveOutputData;
+            DataReceivedEventHandler receiveErrorData;
+            if(suppressConsoleOutput)
+            {
+                receiveOutputData = CommandLineInvocation.DoNothing;
+                receiveErrorData = CommandLineInvocation.DoNothing;
+            }
+            else
+            {
+                receiveOutputData = CommandLineInvocation.ConsoleReceiveOutputData;
+                receiveErrorData = CommandLineInvocation.ConsoleReceiveErrorData;
+            }
+
             var invocation = new CommandLineInvocation()
             {
                 Command = command,
                 Arguments = arguments,
-                ReceiveOutputData = CommandLineInvocation.DefaultReceiveOutputData,
-                ReceiveErrorData = CommandLineInvocation.DefaultReceiveErrorData,
+                ReceiveOutputData = receiveOutputData,
+                ReceiveErrorData = receiveErrorData,
             };
 
             return invocation;
         }
 
-        public static void DefaultReceiveOutputData(object sender, DataReceivedEventArgs dataReceived)
+        public static void DoNothing(object sender, DataReceivedEventArgs dataReceived)
+        {
+            // Do nothing.
+        }
+
+        public static void ConsoleReceiveOutputData(object sender, DataReceivedEventArgs dataReceived)
         {
             if(dataReceived.Data is null)
             {
                 return;
             }
 
-            Console.WriteLine(dataReceived.Data);
+            Console.Out.WriteLine(dataReceived.Data);
         }
 
-        public static void DefaultReceiveErrorData(object sender, DataReceivedEventArgs dataReceived)
+        public static void ConsoleReceiveErrorData(object sender, DataReceivedEventArgs dataReceived)
         {
             if (dataReceived.Data is null)
             {
                 return;
             }
 
-            Console.WriteLine(dataReceived.Data);
+            Console.Error.WriteLine(dataReceived.Data);
         }
 
         #endregion
