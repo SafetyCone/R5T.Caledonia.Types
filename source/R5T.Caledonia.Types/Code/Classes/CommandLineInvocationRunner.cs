@@ -51,10 +51,21 @@ namespace R5T.Caledonia
         {
             var result = new CommandLineInvocationResult();
 
-            invocation.ReceiveOutputData = result.ReceiveOutputData;
-            invocation.ReceiveErrorData = result.ReceiveErrorData;
+            void ReceiveOutputData(object sender, DataReceivedEventArgs e)
+            {
+                invocation.ReceiveOutputData(sender, e);
 
-            result.ExitCode = CommandLineInvocationRunner.Run(invocation.Command, invocation.Arguments, invocation.ReceiveOutputData, invocation.ReceiveErrorData);
+                result.ReceiveOutputData(sender, e);
+            }
+
+            void ReceiveErrorData(object sender, DataReceivedEventArgs e)
+            {
+                invocation.ReceiveErrorData(sender, e);
+
+                result.ReceiveErrorData(sender, e);
+            }
+
+            result.ExitCode = CommandLineInvocationRunner.Run(invocation.Command, invocation.Arguments, ReceiveOutputData, ReceiveErrorData);
 
             return result;
         }
