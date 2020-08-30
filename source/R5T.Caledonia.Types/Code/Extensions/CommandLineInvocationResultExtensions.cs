@@ -39,7 +39,7 @@ namespace R5T.Caledonia
         {
             using (var reader = result.GetOutputReader())
             {
-                while (!reader.ReadLineIsEnd(out var line))
+                while (reader.ReadLineIsNotEnd(out var line))
                 {
                     yield return line;
                 }
@@ -66,7 +66,7 @@ namespace R5T.Caledonia
         {
             using (var reader = result.GetErrorReader())
             {
-                while (!reader.ReadLineIsEnd(out var line))
+                while (reader.ReadLineIsNotEnd(out var line))
                 {
                     yield return line;
                 }
