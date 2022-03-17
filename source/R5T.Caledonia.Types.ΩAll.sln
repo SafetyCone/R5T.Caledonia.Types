@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R5T.Caledonia.Types", "R5T.Caledonia.Types\R5T.Caledonia.Types.csproj", "{C690CBEA-CE11-46C4-84B1-768A9A215DF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R5T.Caledonia.Types.Construction", "R5T.Caledonia.Types.Construction\R5T.Caledonia.Types.Construction.csproj", "{817AF326-59FF-4169-97E6-C7753EA340A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R5T.Caledonia.Types.Testing", "R5T.Caledonia.Types.Testing\R5T.Caledonia.Types.Testing.csproj", "{014FAF0A-C745-4BC8-AF64-3FA1514070BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C690CBEA-CE11-46C4-84B1-768A9A215DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C690CBEA-CE11-46C4-84B1-768A9A215DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C690CBEA-CE11-46C4-84B1-768A9A215DF1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C690CBEA-CE11-46C4-84B1-768A9A215DF1}.Debug|x64.Build.0 = Debug|Any CPU
+		{C690CBEA-CE11-46C4-84B1-768A9A215DF1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C690CBEA-CE11-46C4-84B1-768A9A215DF1}.Debug|x86.Build.0 = Debug|Any CPU
+		{C690CBEA-CE11-46C4-84B1-768A9A215DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C690CBEA-CE11-46C4-84B1-768A9A215DF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C690CBEA-CE11-46C4-84B1-768A9A215DF1}.Release|x64.ActiveCfg = Release|Any CPU
+		{C690CBEA-CE11-46C4-84B1-768A9A215DF1}.Release|x64.Build.0 = Release|Any CPU
+		{C690CBEA-CE11-46C4-84B1-768A9A215DF1}.Release|x86.ActiveCfg = Release|Any CPU
+		{C690CBEA-CE11-46C4-84B1-768A9A215DF1}.Release|x86.Build.0 = Release|Any CPU
+		{817AF326-59FF-4169-97E6-C7753EA340A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{817AF326-59FF-4169-97E6-C7753EA340A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{817AF326-59FF-4169-97E6-C7753EA340A9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{817AF326-59FF-4169-97E6-C7753EA340A9}.Debug|x64.Build.0 = Debug|Any CPU
+		{817AF326-59FF-4169-97E6-C7753EA340A9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{817AF326-59FF-4169-97E6-C7753EA340A9}.Debug|x86.Build.0 = Debug|Any CPU
+		{817AF326-59FF-4169-97E6-C7753EA340A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{817AF326-59FF-4169-97E6-C7753EA340A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{817AF326-59FF-4169-97E6-C7753EA340A9}.Release|x64.ActiveCfg = Release|Any CPU
+		{817AF326-59FF-4169-97E6-C7753EA340A9}.Release|x64.Build.0 = Release|Any CPU
+		{817AF326-59FF-4169-97E6-C7753EA340A9}.Release|x86.ActiveCfg = Release|Any CPU
+		{817AF326-59FF-4169-97E6-C7753EA340A9}.Release|x86.Build.0 = Release|Any CPU
+		{014FAF0A-C745-4BC8-AF64-3FA1514070BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{014FAF0A-C745-4BC8-AF64-3FA1514070BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{014FAF0A-C745-4BC8-AF64-3FA1514070BC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{014FAF0A-C745-4BC8-AF64-3FA1514070BC}.Debug|x64.Build.0 = Debug|Any CPU
+		{014FAF0A-C745-4BC8-AF64-3FA1514070BC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{014FAF0A-C745-4BC8-AF64-3FA1514070BC}.Debug|x86.Build.0 = Debug|Any CPU
+		{014FAF0A-C745-4BC8-AF64-3FA1514070BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{014FAF0A-C745-4BC8-AF64-3FA1514070BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{014FAF0A-C745-4BC8-AF64-3FA1514070BC}.Release|x64.ActiveCfg = Release|Any CPU
+		{014FAF0A-C745-4BC8-AF64-3FA1514070BC}.Release|x64.Build.0 = Release|Any CPU
+		{014FAF0A-C745-4BC8-AF64-3FA1514070BC}.Release|x86.ActiveCfg = Release|Any CPU
+		{014FAF0A-C745-4BC8-AF64-3FA1514070BC}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
